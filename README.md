@@ -5,7 +5,7 @@ Home: https://CRAN.R-project.org/package=misc3d
 
 Package license: GPL
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A collection of miscellaneous 3d plots, including isosurfaces.
 
