@@ -1,4 +1,4 @@
-{% set version = "0.8-4" %}
+{% set version = "0.9-0" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/misc3d_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/misc3d/misc3d_{{ version }}.tar.gz
-  sha256: 75de3d2237f67f9e58a36e80a6bbf7e796d43eb46789f2dd1311270007bf5f62
+  sha256: a1e9291d625bd1312bae5b0e26d48b9362f66a8a0fabbf48891ba1d2432e4e82
 
 build:
   noarch: generic
-  number: 2003
+  number: 0
 
   rpaths:
     - lib/R/lib/
