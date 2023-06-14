@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-misc3d-feedst
 
 Home: https://CRAN.R-project.org/package=misc3d
 
-Package license: GPL
+Package license: GPL-2.0-or-later
 
 Summary: A collection of miscellaneous 3d plots, including isosurfaces.
 
