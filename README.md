@@ -1,11 +1,11 @@
-About r-misc3d
-==============
+About r-misc3d-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-misc3d-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=misc3d
 
 Package license: GPL
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-misc3d-feedstock/blob/main/LICENSE.txt)
 
 Summary: A collection of miscellaneous 3d plots, including isosurfaces.
 
