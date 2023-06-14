@@ -1,5 +1,4 @@
 {% set version = "0.9-1" %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,40 +7,41 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: misc3d_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/misc3d_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/misc3d/misc3d_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/misc3d_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/misc3d/misc3d_{{ version }}.tar.gz
   sha256: a07bbb0de153e806cd79675ed478d2d9221cff825654f59a71a9cf61f4293d65
 
 build:
-  noarch: generic
+  merge_build_host: True  # [win]
   number: 2
-
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+  host:
     - r-base
-
   run:
     - r-base
 
 test:
   commands:
-    - $R -e "library('misc3d')"  # [not win]
+    - $R -e "library('misc3d')"           # [not win]
     - "\"%R%\" -e \"library('misc3d')\""  # [win]
 
 about:
   home: https://CRAN.R-project.org/package=misc3d
-  license: GPL
+  license: GPL-2.0-or-later
   summary: A collection of miscellaneous 3d plots, including isosurfaces.
   license_family: GPL
-
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+
 extra:
   recipe-maintainers:
     - conda-forge/r
