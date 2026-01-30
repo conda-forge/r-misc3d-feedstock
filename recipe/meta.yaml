@@ -1,4 +1,4 @@
-{% set version = "0.9-1" %}
+{% set version = "0.9-2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/misc3d_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/misc3d/misc3d_{{ version }}.tar.gz
-  sha256: a07bbb0de153e806cd79675ed478d2d9221cff825654f59a71a9cf61f4293d65
+  sha256: fabd1b0348def8244a627664206cfa610a84fa34c6e21da73a6c13d547229b99
 
 build:
-  number: 4
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
